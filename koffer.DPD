@@ -1,0 +1,45 @@
+# Symantec IDDE generated .dpd file. V: 7200
+koffer.class: \
+	koffer.java \
+	klevel.java 
+klevel.class: \
+	klevel.java \
+	suitcase.java 
+suitcase.class: \
+	suitcase.java \
+	darts.java 
+darts.class: \
+	darts.java \
+	intro.java 
+intro.class: \
+	intro.java \
+	plane.java 
+plane.class: \
+	plane.java \
+	train.java 
+train.class: \
+	train.java \
+	drive.java 
+drive.class: \
+	drive.java \
+	bcLabel.java 
+bclabel.class: \
+	bclabel.java \
+	bcManager.java 
+bcmanager.class: \
+	bcmanager.java \
+	socks.java 
+socks.class: \
+	socks.java \
+	dimFilter.java 
+dimfilter.class: \
+	dimfilter.java \
+	clearFilter.java 
+clearfilter.class: \
+	clearfilter.java \
+	whack.java 
+whack.class: \
+	whack.java \
+	end.java 
+end.class: \
+	end.java 
