@@ -307,3 +307,36 @@ public class klevel extends Canvas implements Runnable
     }
 
 }
+
+class President
+{
+    String Name, Party, Elect, Serve, Extra;
+    boolean done;
+
+    public President (Name, Party, Elect, Serve)
+    {
+        return this (Name, Pary, Elect, Serve, "");
+    }
+
+    public President (Name, Party, Elect, Serve, Extra)
+    {
+        this.Name = Name;
+        this.Party = Party;
+        this.Elect = Elect;
+        this.Serve = Serve;
+        this.Extra = Extra;
+        this.done = false;
+    }
+}
+
+/*
+Type PresType
+    Name As String
+    Party As String
+    Elect As String
+    serve As String
+    done As Single
+    extra As String
+End Type
+
+*/
