@@ -10,6 +10,7 @@
     background: #000;
     margin: 0;
     height: 100%;
+    overflow: hidden;
   }
   body {
     display: flex;
@@ -17,6 +18,8 @@
     justify-content: center;
   }
   #scaler {
+    /* Scale set by fitScale() in koffer.js: 2x when the window is big
+       enough, otherwise shrunk to fit while keeping the aspect ratio. */
     transform: scale(2);
     transform-origin: center center;
   }

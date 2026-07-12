@@ -169,4 +169,11 @@ class Game {
   }
 }
 
+function fitScale() {
+  const s = Math.min(2, window.innerWidth / 410, window.innerHeight / 375);
+  document.getElementById("scaler").style.transform = `scale(${s})`;
+}
+window.addEventListener("resize", fitScale);
+fitScale();
+
 window.game = new Game();
