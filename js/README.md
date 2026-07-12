@@ -30,12 +30,14 @@ The port aims to be pixel- and behavior-faithful to the original applet:
   `assets/`; the GIF artwork is used unmodified.
 - Original quirks are preserved deliberately, e.g. the `disable_dim=1`
   diagonal-scanline effect behind message banners, the 1997 German grammar
-  (including the title), and the diamond placement bug described below.
+  (including the title), and the quirks described below.
 
 Keyboard: arrow keys (plane, train, drive, darts). Mouse/touch also work where
 the original supported them.
 
-## The diamond placement bug (that cancels itself out)
+## Quirks
+
+### The diamond placement bug (that cancels itself out)
 
 The matching game (`socks.java`) seeds its 5×3 board like this:
 
@@ -63,3 +65,16 @@ uniformly-random diamond, placed not by the placement code but by elimination.
 (Had the board been 4×4, there would have been two diamonds.)
 
 The port reproduces this faithfully, dead placement loop and all.
+
+### The Mainzer Dom is, art-historically speaking, Notre-Dame de Paris
+
+The game is set in Mainz: the drive level ends at "der Dom" and the darts
+level takes place "am Ostportal." But look closely at `dom.gif` and
+`dart_scene.gif`: twin flat-topped Gothic towers, a Gallery of Kings, a
+central rose window, three portals, a flèche behind — that is the west facade
+of **Notre-Dame de Paris**, deployed about 550 km east of where it stands.
+The real Mainz Cathedral is Romanesque red sandstone with an octagonal
+crossing tower and looks nothing like it. (The *text* is Mainz-accurate,
+though — the Mainzer Dom really is entered through side portals and has an
+east choir. The vocabulary did its homework; the pixel artist grabbed the
+most famous cathedral reference picture available in 1997.)
