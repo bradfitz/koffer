@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Der verloren Koffer</title>
+<style>
+  /* Applet chrome colors from bcManager(70,70,70,255,255,255,2):
+     flat rgb(70,70,70), highlight rgb(94,94,94), shadow rgb(37,37,37). */
+  html, body {
+    background: #000;
+    margin: 0;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #scaler {
+    transform: scale(2);
+    transform-origin: center center;
+  }
+  #applet {
+    position: relative;
+    width: 410px;
+    height: 375px;
+    background: rgb(70,70,70);
+    border-top: 2px solid rgb(94,94,94);
+    border-left: 2px solid rgb(94,94,94);
+    border-bottom: 2px solid rgb(37,37,37);
+    border-right: 2px solid rgb(37,37,37);
+    box-sizing: border-box;
+  }
+  #titlepanel {
+    position: absolute;
+    left: 5px; top: 5px;
+    width: 400px; height: 35px;
+    overflow: hidden;
+  }
+  #title {
+    color: #fff;
+    font: bold 12px "Times New Roman", serif;
+    height: 17px;
+    white-space: nowrap;
+  }
+  #inst {
+    color: #ff0;
+    font: 12px "Times New Roman", serif;
+    height: 17px;
+    white-space: nowrap;
+  }
+  #game {
+    position: absolute;
+    left: 3px; top: 43px;   /* canvas at (5,45); 2px bevel border around it */
+    border-top: 2px solid rgb(37,37,37);
+    border-left: 2px solid rgb(37,37,37);
+    border-bottom: 2px solid rgb(94,94,94);
+    border-right: 2px solid rgb(94,94,94);
+    background: #000;
+    image-rendering: pixelated;
+    outline: none;
+  }
+  button, select {
+    position: absolute;
+    background: rgb(70,70,70);
+    color: #fff;
+    font: 12px Arial, sans-serif;
+    border-top: 2px solid rgb(94,94,94);
+    border-left: 2px solid rgb(94,94,94);
+    border-bottom: 2px solid rgb(37,37,37);
+    border-right: 2px solid rgb(37,37,37);
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  button:active {
+    border-top: 2px solid rgb(37,37,37);
+    border-left: 2px solid rgb(37,37,37);
+    border-bottom: 2px solid rgb(94,94,94);
+    border-right: 2px solid rgb(94,94,94);
+  }
+  button:disabled {
+    color: rgb(150,150,150);
+    cursor: default;
+  }
+  #restart { left: 5px;   top: 350px; width: 100px; height: 20px; }
+  #next    { left: 304px; top: 350px; width: 100px; height: 20px; }
+  #whichlev{ left: 224px; top: 348px; width: 75px;  height: 25px; }
+  #score {
+    position: absolute;
+    left: 110px; top: 350px;
+    width: 130px; height: 20px;
+    color: #fff;
+    font: 15px Helvetica, Arial, sans-serif;
+    line-height: 20px;
+  }
+</style>
+</head>
+<body>
+<div id="scaler">
+  <div id="applet">
+    <div id="titlepanel">
+      <div id="title"></div>
+      <div id="inst"></div>
+    </div>
+    <canvas id="game" width="400" height="300" tabindex="0"></canvas>
+    <button id="restart">Restart Game</button>
+    <div id="score">Score: 0</div>
+    <select id="whichlev"></select>
+    <button id="next">Next Level</button>
+  </div>
+</div>
+<script src="klevel.js"></script>
+<script src="intro.js"></script>
+<script src="plane.js"></script>
+<script src="suitcase.js"></script>
+<script src="train.js"></script>
+<script src="socks.js"></script>
+<script src="drive.js"></script>
+<script src="darts.js"></script>
+<script src="end.js"></script>
+<script src="whack.js"></script>
+<script src="koffer.js"></script>
+</body>
+</html>
