@@ -97,6 +97,43 @@
     font: 15px Helvetica, Arial, sans-serif;
     line-height: 20px;
   }
+  #startover {
+    position: absolute;
+    left: 0; top: 0;
+    width: 406px; height: 371px;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  #startdlg {
+    width: 260px;
+    background: rgb(70,70,70);
+    border-top: 2px solid rgb(94,94,94);
+    border-left: 2px solid rgb(94,94,94);
+    border-bottom: 2px solid rgb(37,37,37);
+    border-right: 2px solid rgb(37,37,37);
+    color: #fff;
+    text-align: center;
+    padding: 10px 14px;
+  }
+  #startdlg h1 {
+    font: bold 16px "Times New Roman", serif;
+    margin: 0 0 8px;
+  }
+  #startdlg p {
+    font: 12px "Times New Roman", serif;
+    margin: 0 0 10px;
+  }
+  #startdlg a {
+    color: #ff0;
+  }
+  #startdlg button {
+    position: static;
+    width: 100px;
+    height: 20px;
+  }
 </style>
 </head>
 <body>
@@ -111,6 +148,17 @@
     <div id="score">Score: 0</div>
     <select id="whichlev"></select>
     <button id="next">Next Level</button>
+    <div id="startover">
+      <div id="startdlg">
+        <h1>Der verloren Koffer</h1>
+        <p>This is a 2026 JS
+        <a href="https://github.com/bradfitz/koffer/blob/main/js/README.md" target="_blank" rel="noopener">port</a>
+        of
+        <a href="https://github.com/bradfitz/koffer#der-verloren-koffer" target="_blank" rel="noopener">Brad
+        &amp; Dan's high school 1997 Java applet</a>.</p>
+        <button id="play">Play</button>
+      </div>
+    </div>
   </div>
 </div>
 <script src="klevel.js"></script>

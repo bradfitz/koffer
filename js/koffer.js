@@ -177,3 +177,11 @@ window.addEventListener("resize", fitScale);
 fitScale();
 
 window.game = new Game();
+
+// Clicking Play is the user gesture that unlocks audio (the window-level
+// pointerdown listener in klevel.js retries any blocked sounds, so the
+// intro anthem starts here rather than blipping on a later button press).
+document.getElementById("play").addEventListener("click", () => {
+  document.getElementById("startover").remove();
+  window.game.canvas.focus();
+});
